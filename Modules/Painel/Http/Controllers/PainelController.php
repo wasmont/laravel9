@@ -26,7 +26,7 @@ class PainelController extends Controller
      */
     public function conversor()
     {
-        $taxas = Taxas::orderBy('tipo', 'ASC')->get();
+        $taxas = Taxas::where('ativo', '=', 1)->orderBy('tipo', 'ASC')->get();
         return view('painel::conversor.form',['taxas'=>$taxas]);
     }
     

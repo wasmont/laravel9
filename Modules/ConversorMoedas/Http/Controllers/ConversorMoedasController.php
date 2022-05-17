@@ -143,7 +143,7 @@ class ConversorMoedasController extends Controller
         $taxaConversao = 0;
         $taxasConvertido = 0;
 
-        $taxas = Taxas::where('tipo', $tipoPagamento)->first();
+        $taxas = Taxas::where('tipo', $tipoPagamento)->where('ativo', '=', 1)->first();
         if(isset($taxas) && (!empty($taxas))){
             $taxaCompraPgto = (($valorCompra * (float)$taxas->valor)/100);
             $taxasConvertido = (($valorConvertido * (float)$taxas->valor)/100);

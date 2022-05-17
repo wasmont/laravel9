@@ -36,7 +36,7 @@
                 <li class="nav-item">
                     <form method="POST" action="{{ URL::to('/logout')}}">
                         @csrf
-                        <a class="nav-link" href="{{ URL::to('/logout')}}" onclick="event.preventDefault();this.closest('form').submit();">Sair</a>
+                        <a class="nav-link" href="{{ URL::to('/logout')}}" onclick="event.preventDefault();this.closest('form').submit();">{{"(".auth()->user()->name.")"??""}} Sair</a>
                     </form>
                 </li>
                 @endauth
