@@ -1,0 +1,13 @@
+{
+    "name": "ConversorMoedas",
+    "alias": "conversormoedas",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ConversorMoedas\\Providers\\ConversorMoedasServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

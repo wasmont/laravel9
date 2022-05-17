@@ -23,6 +23,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // $this->app->bind('path.public', function() {
+        //     return __DIR__;
+        // });
+
+        $this->app->bind('path.public', function() {
+            return base_path().'/../public_html';
+        });
     }
 }
